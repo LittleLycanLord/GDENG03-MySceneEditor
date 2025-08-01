@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a45a7e39-6ece-4f29-86e9-4a9c086e5ee8}</ProjectGuid>
+    <RootNamespace>DirectXAPIUBAY</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/DirectX API - UBAY/Include;$(SolutionDir)/DirectX API - UBAY/Source;$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/tinyobjloader/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/imgui-1.92.0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTexD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/bin</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/DirectX API - UBAY/Include;$(SolutionDir)/DirectX API - UBAY/Source;$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/tinyobjloader/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/imgui-1.92.0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTexD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/bin</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/DirectX API - UBAY/Include;$(SolutionDir)/DirectX API - UBAY/Source;$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/tinyobjloader/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/imgui-1.92.0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTexD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/bin</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/DirectX API - UBAY/Include;$(SolutionDir)/DirectX API - UBAY/Source;$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/tinyobjloader/include;$(SolutionDir)/DirectX API - UBAY/Include/Libs/imgui-1.92.0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTexD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/DirectX API - UBAY/Include/Libs/DirectXTex/bin</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Include\Libs\imgui-1.92.0\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Include\Libs\imgui-1.92.0\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Include\Libs\imgui-1.92.0\imgui.cpp" />
+    <ClCompile Include="Include\Libs\imgui-1.92.0\imgui_draw.cpp" />
+    <ClCompile Include="Include\Libs\imgui-1.92.0\imgui_tables.cpp" />
+    <ClCompile Include="Include\Libs\imgui-1.92.0\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Components\MyComponent.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Components\MyDirectionalLightComponent.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Components\MyMeshComponent.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Components\MyPointLightComponent.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Components\MySpotLightComponent.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Components\MyTransformComponent.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Entities\MyEntity.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Systems\MyLightingSystem.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Systems\MyMeshRenderingSystem.cpp" />
+    <ClCompile Include="Source\Core\Entity Component System\Systems\MySystem.cpp" />
+    <ClCompile Include="Source\Core\ImGui\ImGuiPanels\MyInspectorPanel.cpp" />
+    <ClCompile Include="Source\Core\ImGui\MyImGuiPanel.cpp" />
+    <ClCompile Include="Source\Core\Input System\MyInputListener.cpp" />
+    <ClCompile Include="Source\Core\Input System\MyInputSystem.cpp" />
+    <ClCompile Include="Source\Core\MyLogger.cpp" />
+    <ClCompile Include="Source\Core\MyRenderSystem.cpp" />
+    <ClCompile Include="Source\Core\Primitives\MyQuad.cpp" />
+    <ClCompile Include="Source\Core\Primitives\MyTriangle.cpp" />
+    <ClCompile Include="Source\Core\Resource System\Managers\MyMesh.cpp" />
+    <ClCompile Include="Source\Core\Resource System\Managers\MyMeshManager.cpp" />
+    <ClCompile Include="Source\Core\Resource System\Managers\MyTexture.cpp" />
+    <ClCompile Include="Source\Core\Resource System\Managers\MyTextureManager.cpp" />
+    <ClCompile Include="Source\Core\Resource System\MyResource.cpp" />
+    <ClCompile Include="Source\Core\Resource System\MyResourceSystem.cpp" />
+    <ClCompile Include="Source\Game\Lighting\MyDirectionalLight.cpp" />
+    <ClCompile Include="Source\Game\Lighting\MyLight.cpp" />
+    <ClCompile Include="Source\Game\Lighting\MyLightManager.cpp" />
+    <ClCompile Include="Source\Game\Lighting\MyPointLight.cpp" />
+    <ClCompile Include="Source\Game\Lighting\MySpotLight.cpp" />
+    <ClCompile Include="Source\Game\MyCamera.cpp" />
+    <ClCompile Include="Source\Graphics\Buffers\MyConstantBuffer.cpp" />
+    <ClCompile Include="Source\Graphics\Buffers\MyIndexBuffer.cpp" />
+    <ClCompile Include="Source\Graphics\MyDeviceContext.cpp" />
+    <ClCompile Include="Source\Graphics\MyGraphicsEngine.cpp" />
+    <ClCompile Include="Source\Graphics\MySwapChain.cpp" />
+    <ClCompile Include="Source\Graphics\Buffers\MyVertexBuffer.cpp" />
+    <ClCompile Include="Source\Graphics\Shaders\MyDomainShader.cpp" />
+    <ClCompile Include="Source\Graphics\Shaders\MyHullShader.cpp" />
+    <ClCompile Include="Source\Graphics\Shaders\MyPixelShader.cpp" />
+    <ClCompile Include="Source\Graphics\Shaders\MyVertexShader.cpp" />
+    <ClCompile Include="Source\Window\MyAppWindow.cpp" />
+    <ClCompile Include="Source\Window\MyWindow.cpp" />
+    <ClCompile Include="tinyobjimplementation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\Core\Entity Component System\Components\MyComponent.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Components\MyDirectionalLightComponent.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Components\MyMeshComponent.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Components\MyPointLightComponent.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Components\MySpotLightComponent.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Components\MyTransformComponent.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Entities\MyEntity.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Systems\MyLightingSystem.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Systems\MyMeshRenderingSystem.hpp" />
+    <ClInclude Include="Include\Core\Entity Component System\Systems\MySystem.hpp" />
+    <ClInclude Include="Include\Core\ImGui\ImGuiPanels\MyInspectorPanel.hpp" />
+    <ClInclude Include="Include\Core\ImGui\MyImGuiPanel.hpp" />
+    <ClInclude Include="Include\Core\Input System\MyInputListener.hpp" />
+    <ClInclude Include="Include\Core\Input System\MyInputSystem.hpp" />
+    <ClInclude Include="Include\Core\MyLogger.hpp" />
+    <ClInclude Include="Include\Core\MyRenderSystem.hpp" />
+    <ClInclude Include="Include\Core\Prerequisites.hpp" />
+    <ClInclude Include="Include\Core\Primitives\MyQuad.hpp" />
+    <ClInclude Include="Include\Core\Primitives\MyTriangle.hpp" />
+    <ClInclude Include="Include\Core\Resource System\Managers\MyMesh.hpp" />
+    <ClInclude Include="Include\Core\Resource System\Managers\MyMeshManager.hpp" />
+    <ClInclude Include="Include\Core\Resource System\Managers\MyTexture.hpp" />
+    <ClInclude Include="Include\Core\Resource System\Managers\MyTextureManager.hpp" />
+    <ClInclude Include="Include\Core\Resource System\MyResource.hpp" />
+    <ClInclude Include="Include\Core\Resource System\MyResourceSystem.hpp" />
+    <ClInclude Include="Include\Game\Lighting\MyDirectionalLight.hpp" />
+    <ClInclude Include="Include\Game\Lighting\MyLight.hpp" />
+    <ClInclude Include="Include\Game\Lighting\MyLightManager.hpp" />
+    <ClInclude Include="Include\Game\Lighting\MyPointLight.hpp" />
+    <ClInclude Include="Include\Game\Lighting\MySpotLight.hpp" />
+    <ClInclude Include="Include\Game\MyCamera.hpp" />
+    <ClInclude Include="Include\Game\MyTransform.hpp" />
+    <ClInclude Include="Include\Graphics\Buffers\MyConstantBuffer.hpp" />
+    <ClInclude Include="Include\Graphics\Buffers\MyIndexBuffer.hpp" />
+    <ClInclude Include="Include\Graphics\MyDeviceContext.hpp" />
+    <ClInclude Include="Include\Graphics\MyGraphicsEngine.hpp" />
+    <ClInclude Include="Include\Graphics\MySwapChain.hpp" />
+    <ClInclude Include="Include\Graphics\Buffers\MyVertexBuffer.hpp" />
+    <ClInclude Include="Include\Graphics\Shaders\MyDomainShader.hpp" />
+    <ClInclude Include="Include\Graphics\Shaders\MyHullShader.hpp" />
+    <ClInclude Include="Include\Graphics\Shaders\MyPixelShader.hpp" />
+    <ClInclude Include="Include\Graphics\Shaders\MyVertexShader.hpp" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\imconfig.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\imgui.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\imgui_internal.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\imstb_rectpack.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\imstb_textedit.h" />
+    <ClInclude Include="Include\Libs\imgui-1.92.0\imstb_truetype.h" />
+    <ClInclude Include="Include\Libs\tinyobjloader\include\tiny_obj_loader.h" />
+    <ClInclude Include="Include\Math\MyConstant.hpp" />
+    <ClInclude Include="Include\Math\MyLightData.hpp" />
+    <ClInclude Include="Include\Math\MyMatrix4x4.hpp" />
+    <ClInclude Include="Include\Math\MyMeshVertex.hpp" />
+    <ClInclude Include="Include\Math\MyScreenPoint.hpp" />
+    <ClInclude Include="Include\Math\MyVector2.hpp" />
+    <ClInclude Include="Include\Math\MyVector3.hpp" />
+    <ClInclude Include="Include\Math\MyVector4.hpp" />
+    <ClInclude Include="Include\Math\MyVertex.hpp" />
+    <ClInclude Include="Include\Window\MyAppWindow.hpp" />
+    <ClInclude Include="Include\Window\MyWindow.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
