@@ -15,6 +15,7 @@ namespace DX3D {
         int id;
         std::unordered_map<std::type_index, MyComponentPtr> components;
     public:
+        bool isPrimitive = false;
         MyTransformComponentPtr transformComponent = nullptr;
 
         //* ╔════════════════════════════╗

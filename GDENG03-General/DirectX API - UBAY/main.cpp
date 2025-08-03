@@ -11,6 +11,9 @@ extern const std::wstring DOMAIN_SHADER_DIRECTORY = L"Shaders/Domain/TexturedTea
 extern const std::wstring VERTEX_SHADER_DIRECTORY = L"Shaders/Vertex/TexturedTeapotVertexShader.hlsl";
 extern const std::wstring PIXEL_SHADER_DIRECTORY = L"Shaders/Pixel/TexturedTeapotPixelShader.hlsl";
 
+extern const std::wstring PRIMITIVE_PS_SHADER_DIRECTORY = L"Shaders/Pixel/RainbowCubePixelShader.hlsl";
+extern const std::wstring PRIMITIVE_VS_SHADER_DIRECTORY = L"Shaders/Vertex/RainbowCubeVertexShader.hlsl";
+
 // Lighting Shader Paths - New dedicated lighting shaders
 extern const std::wstring LIGHTING_VERTEX_SHADER_DIRECTORY = L"Shaders/Vertex/LightingVertexShader.hlsl";
 extern const std::wstring LIGHTING_PIXEL_SHADER_DIRECTORY = L"Shaders/Pixel/LightingPixelShader.hlsl";

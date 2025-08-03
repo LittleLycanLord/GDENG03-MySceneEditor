@@ -150,6 +150,8 @@
     <ClCompile Include="Include\Libs\imgui-1.92.0\imgui_tables.cpp" />
     <ClCompile Include="Include\Libs\imgui-1.92.0\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\Core\Primitives\MyCube.cpp" />
+    <ClCompile Include="Source\Core\Primitives\MyPrimitive.cpp" />
     <ClCompile Include="Source\Core\Entity Component System\Components\MyComponent.cpp" />
     <ClCompile Include="Source\Core\Entity Component System\Components\MyDirectionalLightComponent.cpp" />
     <ClCompile Include="Source\Core\Entity Component System\Components\MyMeshComponent.cpp" />
@@ -257,6 +259,8 @@
     <ClInclude Include="Include\Math\MyVertex.hpp" />
     <ClInclude Include="Include\Window\MyAppWindow.hpp" />
     <ClInclude Include="Include\Window\MyWindow.hpp" />
+    <ClInclude Include="Include\Core\Primitives\MyPrimitive.h" />
+    <ClInclude Include="Include\Core\Primitives\MyCube.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -62,6 +62,9 @@ namespace DX3D {
         MyVertexShaderPtr vertexShader{ nullptr };
         MyPixelShaderPtr pixelShader{ nullptr };
 
+        MyVertexShaderPtr primitiveVS{ nullptr };
+        MyPixelShaderPtr primitivePS{ nullptr };
+
         //* ╔═════════════════╗
         //* ║ Lighting System ║
         //* ╚═════════════════╝

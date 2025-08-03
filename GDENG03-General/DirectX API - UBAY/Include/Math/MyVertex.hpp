@@ -89,6 +89,12 @@ namespace DX3D {
         MyVertex(const MyVector3& position) : position(position), textureCoordinate(1.0f) {}
         MyVertex(const MyVector3& position, const MyVector2& textureCoordinate) : position(position), textureCoordinate(textureCoordinate) {}
     };
+
+    struct MyPrimitiveVertex {
+        MyVector3 position;
+        MyVector3 color;
+
+    };
 } // namespace DX3D
 
 

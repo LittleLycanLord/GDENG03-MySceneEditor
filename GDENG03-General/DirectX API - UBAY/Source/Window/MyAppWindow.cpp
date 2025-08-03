@@ -8,6 +8,8 @@ extern const std::wstring HULL_SHADER_DIRECTORY;
 extern const std::wstring DOMAIN_SHADER_DIRECTORY;
 extern const std::wstring VERTEX_SHADER_DIRECTORY;
 extern const std::wstring PIXEL_SHADER_DIRECTORY;
+extern const std::wstring PRIMITIVE_VS_SHADER_DIRECTORY;
+extern const std::wstring PRIMITIVE_PS_SHADER_DIRECTORY;
 extern const std::wstring LIGHTING_VERTEX_SHADER_DIRECTORY;
 extern const std::wstring LIGHTING_PIXEL_SHADER_DIRECTORY;
 extern const std::wstring LIGHTING_HULL_SHADER_DIRECTORY;
@@ -46,6 +48,25 @@ void MyAppWindow::InitializeShaders() {
 
     this->vertexShader = MyGraphicsEngine::GetInstance()->GetRenderSystem()->CreateVertexShader(vertexShaderByteCode, vertexShaderSize);
     if (!this->vertexShader) {
+        LOG_ERROR("SHADERS", "Failed to create vertex shader object!");
+        throw std::exception("Failed to create vertexShader!");
+        return;
+    }
+    MyGraphicsEngine::GetInstance()->GetRenderSystem()->ReleaseCompiledShader();
+
+    //Primitive Vertex Shader Application//
+    void* primitiveVSByteCode = nullptr;
+    size_t primitiveVSsize = 0;
+    if (!MyGraphicsEngine::GetInstance()->GetRenderSystem()->CompileVertexShader(
+        PRIMITIVE_VS_SHADER_DIRECTORY.c_str(), "main", &primitiveVSByteCode, &primitiveVSsize)) {
+        LOG_ERROR("SHADERS", "Failed to compile vertex shader!");
+        throw std::exception("Failed to compile vertex shader!");
+        return;
+    }
+    LOG_INFO("SHADERS", "Vertex shader compiled successfully");
+
+    this->primitiveVS = MyGraphicsEngine::GetInstance()->GetRenderSystem()->CreateVertexShader(primitiveVSByteCode, primitiveVSsize);
+    if (!this->primitiveVS) {
         LOG_ERROR("SHADERS", "Failed to create vertex shader object!");
         throw std::exception("Failed to create vertexShader!");
         return;
@@ -92,6 +113,21 @@ void MyAppWindow::InitializeShaders() {
     }
     this->pixelShader = MyGraphicsEngine::GetInstance()->GetRenderSystem()->CreatePixelShader(pixelShaderByteCode, pixelShaderSize);
     if (!this->pixelShader) {
+        throw std::exception("Failed to create pixelShader!");
+        return;
+    }
+    MyGraphicsEngine::GetInstance()->GetRenderSystem()->ReleaseCompiledShader();
+
+    //Primitive Pixel Shader Application//
+    void* primitivePSByteCode = nullptr;
+    size_t primitivePSsize = 0;
+    if (!MyGraphicsEngine::GetInstance()->GetRenderSystem()->CompilePixelShader(
+        PIXEL_SHADER_DIRECTORY.c_str(), "main", &primitivePSByteCode, &primitivePSsize)) {
+        throw std::exception("Failed to compile pixel shader!");
+        return;
+    }
+    this->primitivePS = MyGraphicsEngine::GetInstance()->GetRenderSystem()->CreatePixelShader(primitivePSByteCode, primitivePSsize);
+    if (!this->primitivePS) {
         throw std::exception("Failed to create pixelShader!");
         return;
     }
